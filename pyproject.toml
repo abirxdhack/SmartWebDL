@@ -1,0 +1,30 @@
+[project]
+name = "tmpfiles"
+version = "1.0.0"
+description = "Async FastAPI-based Website Source Code Downloader Api"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "uvloop",
+    "aiofiles",
+    "aiohttp",
+    "beautifulsoup4",
+    "lxml",
+]
+
+[project.scripts]
+app = "api:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = ["templates*", "static*", "assets*", "frontend*"]

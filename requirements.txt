@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+uvloop
+aiofiles
+aiohttp
+beautifulsoup4
+lxml
